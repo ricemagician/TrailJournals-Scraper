@@ -39,7 +39,6 @@ for i in range(1000):
     printClass(dutchsoup, 'col-sm-4 entry-text-right')
     print("<br>")
     printClass(dutchsoup, 'col-sm-12 entry')
-    printClass
     print("<br><br><p>=========</p><br><br>")
 
     new_href= dutchsoup.find_all("a", string="Next")
