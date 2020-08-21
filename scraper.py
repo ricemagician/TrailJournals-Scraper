@@ -24,7 +24,7 @@ def printClass(soup, class_item):
     elif journal:
         print(journal[0].prettify(formatter='html'))
 
-
+#Our starting point, the first journal entry
 url = "https://www.trailjournals.com/journal/entry/26845"
 page = requests.get(url)
 dutchsoup = BeautifulSoup(page.content, 'html.parser')
