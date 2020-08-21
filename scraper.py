@@ -6,18 +6,8 @@ Purpoase: Extract all journal entries from Dutch's AT journal into a singular ht
 
 import requests
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver import Firefox
-from selenium.webdriver.firefox.options import Options
 
-from selenium.webdriver.common.keys import Keys
 
-"""
-date_journal = soup.findAll("div", {"class": 'col-sm-12 entry-text-center entry-date'})
-print(date_journal[0].prettify())
-day_journal = soup.findAll("div", {"class": 'col-sm-12 entry'})
-print(day_journal[0].prettify())
-"""
 def printClass(soup, class_item):
     """Find the items corresponding to a specific class name in your soup and print them to stdout"""
 
@@ -39,14 +29,6 @@ url = "https://www.trailjournals.com/journal/entry/26845"
 page = requests.get(url)
 dutchsoup = BeautifulSoup(page.content, 'html.parser')
 
-"""driver = webdriver.Firefox()
-
-opts = Options()
-opts.set_headless()
-
-browser = Firefox(options=opts)
-browser.get('https://www.trailjournals.com/journal/entry/26845')
-"""
 
 for i in range(1000):
     #I was afraid of starting an infinite loop between dota games so I capped it out
